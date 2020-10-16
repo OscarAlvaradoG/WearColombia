@@ -9,9 +9,11 @@ export default function Home(props) {
                 source={require('../assets/fondo.png')}
                 style={styles.imagenFondoInicio}>
                 <View>
+                <TouchableHighlight onPress={()=>{ props.navigation.navigate('Inicio')}}>
                     <Image
                         style={styles.iconoinicio}
                         source={require('../assets/logo.png')} />
+                         </TouchableHighlight>
                 </View>
             </ImageBackground>
         </View>
@@ -30,8 +32,8 @@ const styles = StyleSheet.create({
         justifyContent: 'center'
     },
     iconoinicio: {
-        width: 180,
-        height: 180,
+        width: 250,
+        height: 250,
         marginLeft: 'auto',
         marginRight: 'auto'
     },
