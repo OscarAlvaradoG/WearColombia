@@ -5,6 +5,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Homesc from './components/home';
 import Inicio from './components/iniciosesion';
+import Regi from './components/registro';
+import Tipreg from './components/tiporegistro';
 
 const Stack = createStackNavigator();
 
@@ -20,6 +22,19 @@ function InicioSe({ navigation }) {
   );
 }
 
+function Regist({ navigation }) {
+  return (
+    <Regi navigation={navigation} />
+  );
+}
+
+function Tipre({ navigation }) {
+  return (
+    <Tipreg navigation={navigation} />
+  );
+}
+
+
 
 function App() {
   return (    
@@ -28,6 +43,8 @@ function App() {
       {/* <Text>Prueba</Text>  */}
         <Stack.Screen name="Homesc" component={Home} /> 
         <Stack.Screen name="Inicio" component={InicioSe} />
+        <Stack.Screen name="Regi" component={Regist} />
+        <Stack.Screen name="Tipreg" component={Tipre} />
       </Stack.Navigator>
     </NavigationContainer>
   );
