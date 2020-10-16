@@ -9,9 +9,11 @@ export default function Home(props) {
                 source={require('../assets/fondo.png')}
                 style={styles.imagenFondoInicio}>
                 <View>
+                <TouchableHighlight onPress={()=>{ props.navigation.navigate('Inicio')}}>
                     <Image
                         style={styles.iconoinicio}
                         source={require('../assets/logo.png')} />
+                         </TouchableHighlight>
                 </View>
             </ImageBackground>
         </View>
