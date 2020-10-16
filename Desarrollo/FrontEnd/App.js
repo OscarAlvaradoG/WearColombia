@@ -4,6 +4,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Homesc from './components/home';
+import Inicio from './components/iniciosesion';
 
 const Stack = createStackNavigator();
 
@@ -13,13 +14,20 @@ function Home({ navigation }) {
   );
 }
 
+function InicioSe({ navigation }) {
+  return (
+    <Inicio navigation={navigation} />
+  );
+}
+
 
 function App() {
   return (    
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Inicio" headerMode="none">
+      <Stack.Navigator initialRouteName="Homesc" headerMode="none">
       {/* <Text>Prueba</Text>  */}
         <Stack.Screen name="Homesc" component={Home} /> 
+        <Stack.Screen name="Inicio" component={InicioSe} />
       </Stack.Navigator>
     </NavigationContainer>
   );
@@ -38,3 +46,4 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
